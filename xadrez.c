@@ -6,6 +6,8 @@
 
 int main() {
     int casas,i;
+    int movimentoCompleto = 1;
+    int direcao2CasasCavalo,direcao1CasaCavalo;
 
     printf("Digite o numero de casas que deseja movimentar o Bispo para a cima,direita...\n");
     scanf("%d", &casas);
@@ -28,17 +30,63 @@ int main() {
         printf("Esquerda\n");
     }
 
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    do {
 
-    // Implementação de Movimentação do Bispo 5 casas direita
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+        printf("Digite a direção das duas casas do Cavalo...\nSendo:\n1. Cima\n2. Baixo\n3. Direita\n4. Esqueda\n");
+        scanf("%d", &direcao2CasasCavalo);
 
-    // Implementação de Movimentação da Torre 5 casas pra cima
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
+        if (direcao2CasasCavalo >= 5 || direcao2CasasCavalo == 0){
+            printf("Direção invalida!\n");
+            printf("Digite novamente.\n");
+        }
 
-    // Implementação de Movimentação da Rainha 8 casas esquerda
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
+    }  while (direcao2CasasCavalo > 2 || direcao2CasasCavalo == 0);
+
+    
+
+    do {
+
+        printf("Agora digite a direção das casa final do Cavalo para formar o L...\nSendo:\n1. Esquerda\n2. Direita\n");
+        scanf("%d", &direcao1CasaCavalo);
+
+        if (direcao1CasaCavalo != 1 || direcao1CasaCavalo != 2){
+            printf("Direção invalida!\n");
+            printf("Digite novamente.\n");
+        }
+
+    }  while (direcao1CasaCavalo > 2 || direcao1CasaCavalo == 0);
+
+    
+
+    while (movimentoCompleto--)
+    {
+        for(i = 0; i < 2; i++){
+            switch(direcao2CasasCavalo){
+                case 1:
+                    printf("Cima\n");
+                    break;
+                case 2:
+                    printf("Baixo\n");
+                    break;
+                case 3:
+                    printf("Direita\n");
+                    break;
+                case 4:
+                    printf("Esquerda\n");
+                    break;
+            }
+        }
+        switch(direcao1CasaCavalo){
+                case 1:
+                    printf("Esquerda\n");
+                    break;
+                case 2:
+                    printf("Direita\n");
+                    break;
+        }
+    }
+    
+
 
     // Nível Aventureiro - Movimentação do Cavalo
     // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
