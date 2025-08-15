@@ -7,11 +7,11 @@
 int main() {
     int casas,i;
 
-    printf("Digite o numero de casas que deseja movimentar o Bispo para a direita...\n");
+    printf("Digite o numero de casas que deseja movimentar o Bispo para a cima,direita...\n");
     scanf("%d", &casas);
 
     for (i = 0; i < casas; i++){
-        printf("Direita\n");
+        printf("Cima,Direita\n");
     }
 
     printf("Digite o numero de casas que deseja movimentar a Torre para cima...\n");
